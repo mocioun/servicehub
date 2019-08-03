@@ -30,7 +30,8 @@ module.exports = {
           owner: 'mocioun',
           name: 'servicehub'
         },
-        prerelease: true
+        prerelease: true,
+        draft: false
       }
     }
   ]
