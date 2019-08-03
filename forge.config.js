@@ -1,25 +1,37 @@
 module.exports = {
-  "packagerConfig": {},
-  "makers": [
+  packagerConfig: {},
+  makers: [
     {
-      "name": "@electron-forge/maker-squirrel",
-      "config": {
-        "name": "my_app"
+      name: "@electron-forge/maker-squirrel",
+      config: {
+        name: "service-hub"
       }
     },
     {
-      "name": "@electron-forge/maker-zip",
-      "platforms": [
+      name: "@electron-forge/maker-zip",
+      platforms: [
         "darwin"
       ]
     },
     {
-      "name": "@electron-forge/maker-deb",
-      "config": {}
+      name: "@electron-forge/maker-deb",
+      config: {}
     },
     {
-      "name": "@electron-forge/maker-rpm",
-      "config": {}
+      name: "@electron-forge/maker-rpm",
+      config: {}
+    }
+  ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'mocioun',
+          name: 'servicehub'
+        },
+        prerelease: true
+      }
     }
   ]
 };
